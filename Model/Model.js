@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
 userSchema.methods.generateSessionToken = async function() {
         try {
             let token = jwt.sign({ _id: this._id }, process.env.AUTH_KEY,{ expiresIn: "2h" });
-            this.sessionToken = token
+            this.authToken = token
             return token;
         } catch (err) {
             console.log(err);
