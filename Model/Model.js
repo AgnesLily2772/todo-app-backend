@@ -54,7 +54,7 @@ const todoSchema = new mongoose.Schema({
         },
         status: {
           type: String,
-          enum: ['Pending', 'Doing', 'Completed'],
+          enum: ['Todo', 'InProgress', 'Done'],
         },
         createdAt: {
           type: Date,
