@@ -9,7 +9,7 @@ const app = express()
 dotenv.config()
 app.use(express.json());
 app.use(cookieParser())
-app.use(cors({ origin: true, credentials: true ,exposedHeaders: ["Set-Cookie"]}));
+app.use(cors({ origin: 'https://todo-app-2772.netlify.app/', credentials: true ,exposedHeaders: ["Set-Cookie"]}));
 
 app.use("/api",router)
 
