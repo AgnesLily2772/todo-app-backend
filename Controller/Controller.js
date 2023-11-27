@@ -47,7 +47,7 @@ export const getUserData = (req, res) =>{
 }
 
 export const signOutUser = (req, res)=> {
-        res.cookie('jwtoken', '', httpOnly: true, expires: new Date(0)});
+        res.cookie('jwtoken', '', { httpOnly: true, expires: new Date(0)});
         //res.clearCookie("jwtoken",{path:'/'});
         res.status(200).send(`userLogout`);
 }
